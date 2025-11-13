@@ -1,0 +1,121 @@
+/*
+=====================================================
+1. Variables CSS (Paleta de Colores)
+=====================================================
+*/
+:root {
+    /* Colores Principales */
+    --color-primario: #1D3557;   /* Azul Profundo (Header/Footer, Títulos) */
+    --color-secundario: #457B9D; /* Turquesa (Enlaces, Resaltado) */
+    --color-acento: #E63946;     /* Naranja Coral (CTA, Énfasis) */
+    
+    /* Colores de Fondo y Texto */
+    --color-fondo: #F1FAEE;      /* Blanco Roto/Claro */
+    --color-texto: #2A2A2A;      /* Gris Oscuro (Texto general) */
+    --color-blanco: #FFFFFF;
+    
+    /* Tipografía */
+    --fuente-principal: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --espaciado-base: 1.5rem; /* ~24px, para espaciado modular */
+}
+
+/*
+=====================================================
+2. Reset Básico y Tipografía
+=====================================================
+*/
+* {
+    box-sizing: border-box; /* Facilita el manejo de padding y bordes */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6; /* Mejora la legibilidad de los párrafos */
+}
+
+/*
+=====================================================
+3. Estilos de Diseño General (Look Gráfico)
+=====================================================
+*/
+
+/* Contenedor principal para centrar contenido (si es necesario) */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaciado-base);
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: var(--espaciado-base);
+}
+
+/* Párrafos y Listas */
+p, ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* Enlaces (Hipervínculos) */
+a {
+    color: var(--color-secundario);
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-acento); /* Cambio de color al pasar el mouse */
+    text-decoration: underline;
+}
+
+/*
+=====================================================
+4. Estilos de Estructura (Header y Footer)
+=====================================================
+*/
+
+header {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    padding: var(--espaciado-base) 0;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--color-fondo); /* Título en el header debe ser claro */
+    border-bottom: none;
+}
+
+header nav a {
+    color: var(--color-fondo);
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: var(--espaciado-base);
+}

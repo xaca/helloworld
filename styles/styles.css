@@ -1,17 +1,18 @@
 /*
 =====================================================
-1. Variables CSS (Paleta de Colores)
+1. Variables CSS (Paleta de Colores de Referencia)
 =====================================================
 */
 :root {
-    /* Colores Principales */
-    --color-primario: #1D3557;   /* Azul Profundo (Header/Footer, Títulos) */
-    --color-secundario: #457B9D; /* Turquesa (Enlaces, Resaltado) */
-    --color-acento: #E63946;     /* Naranja Coral (CTA, Énfasis) */
+    /* Colores Principales basados en la imagen */
+    --color-primario: #004E89;   /* Polynesian Blue (Fuerte, Corporativo) */
+    --color-secundario: #1A659E; /* Lapis Lazuli (Contraste, Enlaces) */
+    --color-acento: #FF6B35;     /* Orange Crayola (CTA, Énfasis) */
     
     /* Colores de Fondo y Texto */
-    --color-fondo: #F1FAEE;      /* Blanco Roto/Claro */
-    --color-texto: #2A2A2A;      /* Gris Oscuro (Texto general) */
+    --color-fondo: #EFEFD0;      /* Beige (Fondo General Suave) */
+    --color-fondo-claro: #F7C59F; /* Peach (Para bloques de contenido o tarjetas) */
+    --color-texto: #004E89;      /* Usamos el primario oscuro para el texto */
     --color-blanco: #FFFFFF;
     
     /* Tipografía */
@@ -25,7 +26,7 @@
 =====================================================
 */
 * {
-    box-sizing: border-box; /* Facilita el manejo de padding y bordes */
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
@@ -34,12 +35,12 @@ body {
     font-family: var(--fuente-principal);
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    line-height: 1.6; /* Mejora la legibilidad de los párrafos */
+    line-height: 1.6; 
 }
 
 /*
 =====================================================
-3. Estilos de Diseño General (Look Gráfico)
+3. Estilos de Diseño General
 =====================================================
 */
 
@@ -59,7 +60,8 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.5rem;
-    border-bottom: 2px solid var(--color-secundario);
+    /* Cambiamos el color del borde para que coincida con la nueva paleta */
+    border-bottom: 2px solid var(--color-acento); 
     padding-bottom: 0.5rem;
 }
 
@@ -71,6 +73,7 @@ h2 {
 /* Párrafos y Listas */
 p, ul {
     margin-bottom: 1rem;
+    color: var(--color-primario); /* Usamos el azul oscuro para el texto de contenido */
 }
 
 ul {
@@ -80,12 +83,12 @@ ul {
 /* Enlaces (Hipervínculos) */
 a {
     color: var(--color-secundario);
-    text-decoration: none; /* Quita el subrayado predeterminado */
+    text-decoration: none; 
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--color-acento); /* Cambio de color al pasar el mouse */
+    color: var(--color-acento); 
     text-decoration: underline;
 }
 
@@ -97,24 +100,24 @@ a:hover {
 
 header {
     background-color: var(--color-primario);
-    color: var(--color-fondo);
+    color: var(--color-blanco); /* El texto debe ser blanco sobre azul oscuro */
     padding: var(--espaciado-base) 0;
     text-align: center;
 }
 
 header h1 {
-    color: var(--color-fondo); /* Título en el header debe ser claro */
+    color: var(--color-blanco); 
     border-bottom: none;
 }
 
 header nav a {
-    color: var(--color-fondo);
+    color: var(--color-fondo-claro); /* Usamos un color más claro para el contraste */
     font-weight: bold;
 }
 
 footer {
     background-color: var(--color-primario);
-    color: var(--color-fondo);
+    color: var(--color-blanco);
     text-align: center;
     padding: 1rem 0;
     margin-top: var(--espaciado-base);
